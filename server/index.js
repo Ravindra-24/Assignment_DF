@@ -13,7 +13,7 @@ const PORT = process.env.PORT || 8080;
 connectDB();
 app.use(
   cors({
-    origin: "https://assignment-df.onrender.com",
+    origin: "https://assignment-df.vercel.app",
     credentials: true,
   })
 );
