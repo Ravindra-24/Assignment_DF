@@ -13,7 +13,7 @@ const PORT = process.env.PORT || 8080;
 connectDB();
 app.use(
   cors({
-    origin: "http://localhost:3000",
+    origin: "https://assignment-df.onrender.com",
     credentials: true,
   })
 );
