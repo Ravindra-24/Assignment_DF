@@ -12,10 +12,7 @@ const PORT = process.env.PORT || 8080;
 
 connectDB();
 app.use(
-  cors({
-    origin: "https://assignment-df.vercel.app",
-    credentials: true,
-  })
+  cors()
 );
 app.use(express.json());
 app.use('/auth', authRoutes)

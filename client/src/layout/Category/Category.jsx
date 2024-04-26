@@ -11,7 +11,7 @@ const Category = () => {
   const [loading, setLoading] = useState(false);
   const dispatch = useDispatch();
   const fetchData = () => {
-    // if(string.length === 0) return;
+    if(string.length === 0) return;
     setLoading(true);
     dispatch(searchCategaryData(string, setLoading));
   }

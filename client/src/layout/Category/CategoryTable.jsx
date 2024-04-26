@@ -32,8 +32,8 @@ function CategoryTable() {
   const checkStatus = (status) => {
     return status === "active" ? false : true;
   };
-const CategaryList = searchedCategaries ? searchedCategaries : categaryData.categaries;
-console.log(CategaryList);
+// const CategaryList = searchedCategaries ? searchedCategaries : categaryData.categaries;
+// console.log(CategaryList);
   return (
     <>
       <DeleteModal
@@ -84,9 +84,9 @@ console.log(CategaryList);
                   </div>
                 </td>
               </tr>
-            ) : CategaryList?.length > 0 ? (
+            ) : categaryData.categaries?.length > 0 ? (
               <>
-                { CategaryList?.map((item) => (
+                { categaryData.categaries?.map((item) => (
                   <Table
                     item={item}
                     handleEditClick={handleEditClick}

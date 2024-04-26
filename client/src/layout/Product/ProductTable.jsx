@@ -19,8 +19,8 @@ function ProductTable() {
 
   const [id, setId] = useState("");
   const [updateItem, setUpdateItem] = useState("");
-  const [productList, setProductList] = useState([]);
-  const dispatch = useDispatch();
+  // const [productList, setProductList] = useState([]);
+  // const dispatch = useDispatch();
   const handleDeleteCard = (id) => {
     setId(id);
     toggleDeleteModal();
@@ -35,14 +35,14 @@ function ProductTable() {
     return status === "active" ? false : true;
   };
 
-     useEffect(() => {
-      if(productData.searchedProduct.length > 0) {
-        setProductList(productData.searchedProduct);
-      } else {
-        setProductList(productData.product);
-      }
-      // dispatch(GetProductItems());
-     }, [productData.product, productData.searchedProduct]);
+    //  useEffect(() => {
+    //   if(productData.searchedProduct.length > 0) {
+    //     setProductList(productData.searchedProduct);
+    //   } else {
+    //     setProductList(productData.product);
+    //   }
+    //   // dispatch(GetProductItems());
+    //  }, [productData.product, productData.searchedProduct]);
 
   return (
     <>
@@ -86,8 +86,8 @@ function ProductTable() {
                   </div>
                 </td>
               </tr>
-            ) : productList && productList.length > 0 ? (
-              productList.map((item) => (
+            ) : productData.product && productData.product.length > 0 ? (
+              productData.product.map((item) => (
                 <Table
                   key={item._id}
                   item={item}

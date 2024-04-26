@@ -11,7 +11,7 @@ const Product = () => {
   const [loading, setLoading] = useState(false);
   const dispatch = useDispatch();
   const fetchData = () => {
-    // if(string.length === 0) return;
+    if(string.length === 0) return;
     setLoading(true);
     dispatch(searchProductData(string, setLoading));
   }
